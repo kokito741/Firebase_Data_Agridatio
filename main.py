@@ -79,8 +79,8 @@ if minutes == 0:
     proccesd_data_temp_average=round(raw_data_temp_average,1)
     proccesd_data_hum_average=round(raw_data_hum_average,1)
     # Save the average temperature to Firebase
-    path_temp_average = user_id +"/average"+"/Living Room/" + formatted_now + str (hours).zfill (2)  + "/temperature"
-    path_hum_average = user_id +"/average"+ "/Living Room/" + formatted_now + str (hours).zfill (2)  + "/humidity"
+    path_temp_average = user_id +"/Average per hour"+"/Living Room/" + formatted_now + str (hours).zfill (2)  + "/temperature"
+    path_hum_average = user_id +"/Average per hour"+ "/Living Room/" + formatted_now + str (hours).zfill (2)  + "/humidity"
     db.reference(path_temp_average).set(proccesd_data_temp_average)
     db.reference(path_hum_average).set(proccesd_data_hum_average)
 #todo add for hours,days,mounts,years and make it continuesly check the time
