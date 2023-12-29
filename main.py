@@ -1,9 +1,9 @@
-import datetime
 import time
 from typing import Any
-
+import calendar
 import firebase_admin
 from firebase_admin import auth, credentials, db
+from datetime import datetime, timedelta
 
 # Firebase configuration
 config = {
@@ -29,7 +29,7 @@ uid = "vN8iEemQ50UZ8SA6RR7I3FFdgfp2"
 
 # Add custom claims for additional privileges.
 # This will set the `admin` claim to `True` for this user.
-auth.set_custom_user_claims (uid, {'admin': True})
+auth.set_custom_user_claims(uid, {'admin': True})
 
 # Log the user in
 email = "kokito741@gmail.com"  # replace with the user's email
@@ -57,7 +57,7 @@ def continuously_check_time(user_id, db):
     """
     while True:
         # Get the current time
-        now = datetime.datetime.now()
+        now = datetime.now()
         minutes = int(now.strftime("%M"))
         hours = int(now.strftime("%H"))
         days = int(now.strftime("%d"))
@@ -68,10 +68,10 @@ def continuously_check_time(user_id, db):
         print(formatted_now)
         if month == 1:
             process_data_year(year, user_id, db)
-        if days == 0:
-            process_data_month(month, year, user_id, db)
+        if days == 1:
+            process_data_month(user_id, db)
         if hours == 0:
-            process_data_days(days, hours, user_id, db, month, year)
+            process_data_days(hours, user_id, db, month, year)
         if minutes == 0:
             process_data_hours(minutes, hours, user_id, device, db, days, month, year)
 
@@ -90,8 +90,7 @@ def process_data_year(year, user_id, db):
     """
     data_temp = []
     data_hum = []
-    if year > 0:
-        year -= 1
+    year -= 1
     for month in range(1, 13):
         formatted_now = str(month).zfill(2) + "-" + str(year)
         path_temp = user_id + "/Average per month/Living Room/" + formatted_now + "/temperature"
@@ -114,28 +113,30 @@ def process_data_year(year, user_id, db):
     print("processed_data_hum_average per year: ", processed_data_hum_average)
 
 
-def process_data_month(month, year, user_id, db):
+def process_data_month(user_id, db):
     """
 
     :type db: object
     :type user_id: object
-    :param month:
-    :param year:
     :param user_id:
     :param db:
     """
     data_temp = []
     data_hum = []
-    if month > 0:
-        month -= 1
-    elif month == 12:
-        month = 1
-    # Assuming each month has 30 days
-    for day in range(1, 31):
+    # Get the date 4 weeks ago
+    date_four_weeks_ago = datetime.today() - timedelta(weeks=5)
+
+    # Get the year and month of the date 5 weeks ago
+    year, month = date_four_weeks_ago.year, date_four_weeks_ago.month
+
+    # Get the last day of that month
+    _, last_day = calendar.monthrange(year, month)
+    for day in range(1, last_day + 1):
         formatted_now = str(day).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year)
         path_temp = user_id + "/Average per day/Living Room/" + formatted_now + "/temperature"
         path_hum = user_id + "/Average per day/Living Room/" + formatted_now + "/humidity"
         data_temp.append(db.reference(path_temp).get())
+        print("data_temp: ", path_temp)
         data_hum.append(db.reference(path_hum).get())
 
     # Calculate the sum while ignoring None values
@@ -154,20 +155,20 @@ def process_data_month(month, year, user_id, db):
     print("processed_data_hum_average per month: ", processed_data_hum_average)
 
 
-def process_data_days(days, hours, user_id, db, month, year):
+def process_data_days(hours, user_id, db, month, year):
     """
 
     :type db: object
     :type user_id: object
-    :param days:
     :param hours:
     :param user_id:
     :param db:
     :param month:
     :param year:
     """
-    if days > 0:
-        days -= 1
+
+   #day-1
+    days = datetime.today() - timedelta(days=1)
 
     data_temp = []
     data_hum = []
@@ -217,7 +218,8 @@ def process_data_hours(minutes, hours, user_id, device, db, days, month, year):
     """
     if hours > 0:
         hours -= 1
-
+    elif hours == 00:
+        hours = 23
     data_temp = []
     data_hum = []
     while minutes < 60:
