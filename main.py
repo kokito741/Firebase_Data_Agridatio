@@ -1,3 +1,5 @@
+"""This module contains some useful functions for date and time operations."""
+
 import time
 import calendar
 import firebase_admin
@@ -9,7 +11,6 @@ logging.config.fileConfig(fname='config.ini', disable_existing_loggers=False)
 
 # Get the logger specified in the file
 logger = logging.getLogger(__name__)
-#save the log continuously in a file
 # Firebase configuration
 config = {
     "apiKey": "AIzaSyBU7Tn2EOD03z5eOseQ2rbKoBzbS3waS9w",
@@ -51,6 +52,8 @@ user_ids = []
 # Format the date and time
 
 # User ID
+
+
 def continuously_check_time(db):
     """
 
@@ -84,19 +87,21 @@ def continuously_check_time(db):
         formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year) + " - " + str(
             hours).zfill(2) + "-" + str(minutes).zfill(2)
         print(formatted_now)
-        # if month == 1:
-        #    process_data_year(year, user_id, db)
-        if days == 1:
+        if month == 1 and days == 1 and hours == 0 and minutes == 0:
             for user_id in user_ids:
-                print("per month average data is being processed")
+                print("per year average data is being process  {0}".format(user_ids))
+                process_data_year(year, user_id, db)
+        if days == 1 and hours == 0 and minutes == 0:
+            for user_id in user_ids:
+                print("per month average data is being process  {0}".format(user_ids))
                 process_data_month(user_id, db)
-        if hours == 0:
+        if hours == 0 and minutes == 0:
             for user_id in user_ids:
-                print("per day average data is being processed")
+                print("per day average data is being processed  {0}".format(user_ids))
                 process_data_days(hours, user_id, db, month, year)
         if minutes == 0:
             for user_id in user_ids:
-                print("per hour average data is being processed", user_id)
+                print("per hour average data is being processed  {0}".format(user_ids))
                 process_data_hours(minutes, hours, user_id, db, days, month, year)
         logger.info("continuously_check_time  waiting for 60 seconds")
         # Sleep for 60 seconds
@@ -112,7 +117,7 @@ def process_data_year(year, user_id, db):
     :param user_id: 
     :param db: 
     """
-    logger.info("Processing data per year started", user_id)
+    logger.info("Processing data per year started {0}".format(user_ids))
     data_temp = []
     data_hum = []
     year -= 1
@@ -134,11 +139,12 @@ def process_data_year(year, user_id, db):
 
     db.reference(path_temp_average).set(processed_data_temp_average)
     db.reference(path_hum_average).set(processed_data_hum_average)
-    logger.info("processed_data_temp_average per year: {0}".format(processed_data_temp_average), user_id)
-    logger.info("processed_data_hum_average per year: {0}".format(processed_data_hum_average), user_id)
+    logger.info("processed_data_temp_average per year: {0} - {1}".format(processed_data_temp_average, user_id))
+    logger.info("processed_data_hum_average per year: {0} - {1}".format(processed_data_hum_average, user_id))
     print("processed_data_temp_average per year: ", processed_data_temp_average)
     print("processed_data_hum_average per year: ", processed_data_hum_average)
-    logger.info("Processing data per year ended", user_id)
+    logger.info("Processing data per year ended {0}".format(user_ids))
+
 
 def process_data_month(user_id, db):
     """
@@ -148,7 +154,7 @@ def process_data_month(user_id, db):
     :param user_id:
     :param db:
     """
-    logger.info("Processing data per month started", user_id)
+    logger.info("Processing data per month started  {0}".format(user_ids))
     data_temp = []
     data_hum = []
     # Get the date 4 weeks ago
@@ -178,11 +184,12 @@ def process_data_month(user_id, db):
     path_hum_average = user_id + "/Average per month" + "/Living Room/" + formatted_now + "/humidity"
     db.reference(path_temp_average).set(processed_data_temp_average)
     db.reference(path_hum_average).set(processed_data_hum_average)
-    logger.info("processed_data_temp_average per month: {0}".format(processed_data_temp_average), user_id)
-    logger.info("processed_data_hum_average per month: {0}".format(processed_data_hum_average), user_id)
+    logger.info("processed_data_temp_average per month: {0} - {1}".format(processed_data_temp_average, user_id))
+    logger.info("processed_data_hum_average per month: {0} - {1}".format(processed_data_hum_average, user_id))
     print("processed_data_temp_average per month: ", processed_data_temp_average)
     print("processed_data_hum_average per month: ", processed_data_hum_average)
-    logger.info("Processing data per month ended", user_id)
+    logger.info("Processing data per month ended  {0}".format(user_ids))
+
 
 def process_data_days(hours, user_id, db, month, year):
     """
@@ -196,8 +203,7 @@ def process_data_days(hours, user_id, db, month, year):
     :param year:
     """
 
-
-    logger.info("Processing data per day started", user_id)
+    logger.info("Processing data per day started  {0}".format(user_ids))
     days = datetime.today() - timedelta(days=1)
 
     data_temp = []
@@ -229,9 +235,10 @@ def process_data_days(hours, user_id, db, month, year):
 
     print("processed_data_temp_average per day: ", processed_data_temp_average)
     print("processed_data_hum_average per day: ", processed_data_hum_average)
-    logger.info("processed_data_temp_average per day: {0}".format(processed_data_temp_average), user_id)
-    logger.info("processed_data_hum_average per day: {0}".format(processed_data_hum_average), user_id)
-    logger.info("Processing data per day ended", user_id)
+    logger.info("processed_data_temp_average per day: {0} - {1}".format(processed_data_temp_average, user_id))
+    logger.info("processed_data_hum_average per day: {0} - {1}".format(processed_data_hum_average, user_id))
+    logger.info("Processing data per day ended  {0}".format(user_ids))
+
 
 def process_data_hours(minutes, hours, user_id, db, days, month, year):
     """
@@ -246,7 +253,7 @@ def process_data_hours(minutes, hours, user_id, db, days, month, year):
     :param month:
     :param year:
     """
-    logger.info("Processing data per hour started", user_id)
+    logger.info("Processing data per hour started {0}".format(user_ids))
     if hours > 0:
         hours -= 1
     elif hours == 00:
@@ -274,13 +281,11 @@ def process_data_hours(minutes, hours, user_id, db, days, month, year):
     path_hum_average = user_id + "/Average per hour" + "/Living Room/" + formatted_now + "/humidity"
     db.reference(path_temp_average).set(processed_data_temp_average)
     db.reference(path_hum_average).set(processed_data_hum_average)
-    logger.info("processed_data_temp_average per hour: {0}".format(processed_data_temp_average), user_id)
-    logger.info("processed_data_hum_average per hour: {0}".format(processed_data_hum_average), user_id)
+    logger.info("processed_data_temp_average per hour: {0} - {1}".format(processed_data_temp_average, user_id))
+    logger.info("processed_data_hum_average per hour: {0} - {1}".format(processed_data_hum_average, user_id))
     print("processed_data_temp_average per hour: ", processed_data_temp_average)
     print("processed_data_hum_average per hour: ", processed_data_hum_average)
-    logger.info("Processing data per hour ended", user_id)
-
-
+    logger.info("Processing data per hour ended  {0}".format(user_ids))
 
 
 if __name__ == "__main__":
