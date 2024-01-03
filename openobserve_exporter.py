@@ -58,6 +58,7 @@ def follow(thefile):
 
 
 if __name__ == '__main__':
+    time.sleep(0.5)
     logfile = open("log.log","r")
     lowliness = follow(logfile)
     for line in lowliness:
