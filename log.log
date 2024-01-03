@@ -1,0 +1,385 @@
+2024-01-03 11:15:46,555 - urllib3.util.retry - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-01-03 11:15:46,563 - google.auth.transport.requests - DEBUG - Making request: POST https://oauth2.googleapis.com/token
+2024-01-03 11:15:46,572 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2024-01-03 11:15:47,328 - urllib3.connectionpool - DEBUG - https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2024-01-03 11:15:47,333 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): identitytoolkit.googleapis.com:443
+2024-01-03 11:15:48,259 - urllib3.connectionpool - DEBUG - https://identitytoolkit.googleapis.com:443 "POST /v1/projects/esp32-dd238/accounts:update HTTP/1.1" 200 None
+2024-01-03 11:15:48,433 - urllib3.connectionpool - DEBUG - https://identitytoolkit.googleapis.com:443 "POST /v1/projects/esp32-dd238/accounts:lookup HTTP/1.1" 200 None
+2024-01-03 11:15:48,434 - __main__ - INFO - Successfully fetched user data: vN8iEemQ50UZ8SA6RR7I3FFdgfp2
+2024-01-03 11:15:48,619 - urllib3.connectionpool - DEBUG - https://identitytoolkit.googleapis.com:443 "GET /v1/projects/esp32-dd238/accounts:batchGet?maxResults=1000 HTTP/1.1" 200 None
+2024-01-03 11:15:48,620 - __main__ - INFO - Starting the program
+2024-01-03 11:15:48,621 - __main__ - INFO - continuously_check_time started
+2024-01-03 11:15:48,621 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:15:48,621 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:16:48,623 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:16:48,623 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:17:48,683 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:17:48,810 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:18:48,853 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:18:48,854 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:19:48,856 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:19:48,858 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:20:48,859 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:20:48,861 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:21:48,862 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:21:48,868 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:22:48,979 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:22:49,134 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:23:49,178 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:23:49,180 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:24:49,181 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:24:49,183 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:25:49,185 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:25:49,193 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:26:49,197 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:26:49,199 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:27:49,211 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:27:49,213 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:28:49,217 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:28:49,219 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:29:49,221 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:29:49,223 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:30:49,225 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:30:49,227 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:31:49,231 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:31:49,232 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:32:49,324 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:32:49,498 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:33:49,539 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:33:49,540 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:34:49,548 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:34:49,549 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:35:49,551 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:35:49,553 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:36:49,555 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:36:49,556 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:37:49,602 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:37:49,688 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:38:49,721 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:38:49,722 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:39:49,722 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:39:49,723 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:40:49,725 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:40:49,727 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:41:49,729 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:41:49,730 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:42:49,731 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:42:49,735 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:43:49,739 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:43:49,741 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:44:49,742 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:44:49,743 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:45:49,745 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:45:49,747 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:46:49,748 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:46:49,750 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:47:49,751 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:47:49,752 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:48:49,755 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:48:49,758 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:49:49,758 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:49:49,759 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:50:49,761 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:50:49,762 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:51:49,764 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:51:49,768 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:52:49,837 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:52:49,893 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:53:49,931 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:53:49,933 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:54:49,934 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:54:49,936 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:55:49,937 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:55:49,938 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:56:49,940 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:56:49,944 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:57:49,957 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:57:49,964 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:58:49,966 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:58:49,971 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 11:59:49,974 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 11:59:49,975 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:00:49,980 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:00:49,987 - __main__ - INFO - Processing data per hour started ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:00:50,020 - urllib3.util.retry - DEBUG - Converted retries value: 3 -> Retry(total=3, connect=None, read=None, redirect=None, status=None)
+2024-01-03 12:00:50,047 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443
+2024-01-03 12:00:51,209 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-00/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,299 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-00/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,370 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-01/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,447 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-01/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,512 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-02/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,580 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-02/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,650 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-03/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,716 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-03/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,787 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-04/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,860 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-04/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,924 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-05/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:51,988 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-05/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,063 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-06/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,131 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-06/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,195 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-07/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,260 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-07/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,336 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-08/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,401 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-08/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,505 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-09/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,585 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-09/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,647 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-10/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,711 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-10/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,781 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-11/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,854 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-11/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,922 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-12/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:52,983 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-12/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,049 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-13/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,113 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-13/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,294 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-14/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,359 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-14/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,432 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-15/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,489 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-15/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,556 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-16/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,623 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-16/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,688 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-17/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,768 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-17/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,847 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-18/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:53,931 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-18/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,001 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-19/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,099 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-19/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,163 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-20/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,228 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-20/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,288 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-21/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,353 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-21/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,413 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-22/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,496 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-22/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,572 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-23/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,634 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-23/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,695 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-24/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,755 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-24/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,820 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-25/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,887 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-25/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:54,949 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-26/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,007 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-26/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,081 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-27/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,139 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-27/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,201 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-28/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,266 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-28/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,327 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-29/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,416 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-29/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,482 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-30/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,548 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-30/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,611 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-31/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,678 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-31/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,741 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-32/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,807 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-32/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,876 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-33/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:55,939 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-33/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,009 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-34/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,078 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-34/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,140 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-35/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,207 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-35/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,267 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-36/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,327 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-36/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,385 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-37/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,447 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-37/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,538 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-38/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,605 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-38/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,671 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-39/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,735 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-39/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,786 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-40/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,848 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-40/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,913 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-41/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:56,983 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-41/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,034 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-42/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,102 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-42/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,167 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-43/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,233 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-43/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,288 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-44/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,357 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-44/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,418 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-45/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,479 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-45/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,533 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-46/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,602 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-46/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,667 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-47/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,730 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-47/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,797 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-48/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,871 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-48/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,927 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-49/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,985 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-49/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:57,992 - urllib3.connectionpool - DEBUG - Resetting dropped connection: esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app
+2024-01-03 12:00:59,042 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-50/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,106 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-50/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,178 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-51/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,299 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-51/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,367 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-52/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,425 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-52/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,496 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-53/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,561 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-53/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,623 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-54/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,692 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-54/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,757 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-55/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,819 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-55/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,870 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-56/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,933 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-56/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:00:59,995 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-57/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,070 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-57/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,145 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-58/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,214 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-58/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,278 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-59/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,340 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Living%20Room/03-01-2024%20-%2011-59/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,409 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "PUT /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Average%20per%20hour/Living%20Room/03-01-2024%20-%2011/temperature.json?print=silent HTTP/1.1" 204 0
+2024-01-03 12:01:00,475 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "PUT /cUgRiGk3v1Yfi59j0eOlNrK7gnn1/Average%20per%20hour/Living%20Room/03-01-2024%20-%2011/humidity.json?print=silent HTTP/1.1" 204 0
+2024-01-03 12:01:00,476 - __main__ - INFO - processed_data_temp_average per hour: 0.0 - cUgRiGk3v1Yfi59j0eOlNrK7gnn1
+2024-01-03 12:01:00,478 - __main__ - INFO - processed_data_hum_average per hour: 0.0 - cUgRiGk3v1Yfi59j0eOlNrK7gnn1
+2024-01-03 12:01:00,479 - __main__ - INFO - Processing data per hour ended  ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:01:00,480 - __main__ - INFO - Processing data per hour started ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:01:00,531 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-00/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,598 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-00/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,660 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-01/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,721 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-01/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,777 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-02/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,836 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-02/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,900 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-03/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:00,961 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-03/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,008 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-04/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,071 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-04/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,134 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-05/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,195 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-05/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,266 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-06/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,329 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-06/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,398 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-07/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,465 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-07/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,527 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-08/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,595 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-08/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,660 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-09/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,722 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-09/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,785 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-10/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,851 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-10/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,938 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-11/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:01,996 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-11/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,075 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-12/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,153 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-12/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,225 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-13/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,289 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-13/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,349 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-14/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,403 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-14/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,468 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-15/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,527 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-15/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,594 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-16/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,647 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-16/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,708 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-17/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,769 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-17/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,830 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-18/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,878 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-18/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:02,937 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-19/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,000 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-19/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,059 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-20/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,119 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-20/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,179 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-21/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,232 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-21/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,298 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-22/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,359 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-22/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,425 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-23/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,475 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-23/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,540 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-24/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,621 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-24/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,686 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-25/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,734 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-25/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,791 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-26/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,852 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-26/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,913 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-27/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:03,964 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-27/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,027 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-28/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,087 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-28/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,143 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-29/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,199 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-29/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,256 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-30/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,305 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-30/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,366 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-31/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,431 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-31/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,492 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-32/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,556 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-32/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,619 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-33/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,675 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-33/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,734 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-34/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,791 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-34/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,846 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-35/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,909 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-35/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:04,969 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-36/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:05,024 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-36/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:05,075 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-37/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:05,129 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-37/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:05,198 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-38/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:05,492 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-38/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:05,496 - urllib3.connectionpool - DEBUG - Resetting dropped connection: esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app
+2024-01-03 12:01:06,698 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-39/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:06,833 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-39/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:06,894 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-40/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:06,947 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-40/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:06,999 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-41/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,050 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-41/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,108 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-42/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,165 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-42/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,227 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-43/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,276 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-43/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,329 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-44/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,387 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-44/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,441 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-45/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,507 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-45/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,571 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-46/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,632 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-46/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,693 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-47/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,749 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-47/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,805 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-48/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,866 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-48/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,926 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-49/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:07,981 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-49/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,041 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-50/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,094 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-50/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,146 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-51/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,199 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-51/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,260 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-52/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,325 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-52/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,386 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-53/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,447 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-53/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,507 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-54/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,564 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-54/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,618 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-55/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,679 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-55/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,739 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-56/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,799 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-56/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,858 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-57/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,916 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-57/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:08,972 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-58/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:09,032 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-58/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:09,092 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-59/temperature.json HTTP/1.1" 200 4
+2024-01-03 12:01:09,154 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "GET /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Living%20Room/03-01-2024%20-%2011-59/humidity.json HTTP/1.1" 200 4
+2024-01-03 12:01:09,206 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "PUT /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Average%20per%20hour/Living%20Room/03-01-2024%20-%2011/temperature.json?print=silent HTTP/1.1" 204 0
+2024-01-03 12:01:09,262 - urllib3.connectionpool - DEBUG - https://esp32-dd238-default-rtdb.europe-west1.firebasedatabase.app:443 "PUT /vN8iEemQ50UZ8SA6RR7I3FFdgfp2/Average%20per%20hour/Living%20Room/03-01-2024%20-%2011/humidity.json?print=silent HTTP/1.1" 204 0
+2024-01-03 12:01:09,263 - __main__ - INFO - processed_data_temp_average per hour: 0.0 - vN8iEemQ50UZ8SA6RR7I3FFdgfp2
+2024-01-03 12:01:09,264 - __main__ - INFO - processed_data_hum_average per hour: 0.0 - vN8iEemQ50UZ8SA6RR7I3FFdgfp2
+2024-01-03 12:01:09,265 - __main__ - INFO - Processing data per hour ended  ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:01:09,265 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:02:09,268 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:02:09,270 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:03:09,271 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:03:09,279 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:04:09,288 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:04:09,290 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:05:09,293 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:05:09,294 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:06:09,295 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:06:09,297 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:07:09,299 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:07:09,302 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:08:09,302 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:08:09,304 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:09:09,305 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:09:09,307 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:10:09,308 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:10:09,309 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:11:09,311 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:11:09,315 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:12:09,316 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:12:09,318 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:13:09,319 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:13:09,320 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
+2024-01-03 12:14:09,322 - __main__ - INFO - user_ids: ['cUgRiGk3v1Yfi59j0eOlNrK7gnn1', 'vN8iEemQ50UZ8SA6RR7I3FFdgfp2']
+2024-01-03 12:14:09,323 - __main__ - INFO - continuously_check_time  waiting for 60 seconds
