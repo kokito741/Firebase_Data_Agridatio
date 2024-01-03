@@ -4,4 +4,4 @@ call venv\Scripts\activate.bat
 start cmd /k pythonw.exe openobserve_exporter.py
 
 # Start the first Python script
-python main.py
+start cmd /k pythonw.exe main.py
