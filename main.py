@@ -87,15 +87,15 @@ def continuously_check_time(db):
         formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year) + " - " + str(
             hours).zfill(2) + "-" + str(minutes).zfill(2)
         print(formatted_now)
-        if month == 1 and days == 1 and hours == 0 and minutes == 0:
+        if month == 1 and days == 2 and hours == 1 and minutes == 1:
             for user_id in user_ids:
                 print("per year average data is being process  {0}".format(user_ids))
                 process_data_year(year, user_id, db)
-        if days == 1 and hours == 0 and minutes == 0:
+        if days == 1 and hours == 0 and minutes == 6:
             for user_id in user_ids:
                 print("per month average data is being process  {0}".format(user_ids))
                 process_data_month(user_id, db)
-        if hours == 0 and minutes == 0:
+        if hours == 0 and minutes == 3:
             for user_id in user_ids:
                 print("per day average data is being processed  {0}".format(user_ids))
                 process_data_days(hours, user_id, db, month, year)
