@@ -128,6 +128,9 @@ def process_data_year(year, user_id, db):
         data_temp.append(db.reference(path_temp).get())
         data_hum.append(db.reference(path_hum).get())
 
+    #remove None values from the list
+    data_temp = [x for x in data_temp if x is not None]
+    data_hum = [x for x in data_hum if x is not None]
     # Calculate the sum while ignoring None values
     raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
     raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
@@ -173,6 +176,9 @@ def process_data_month(user_id, db):
         print("data_temp: ", path_temp)
         data_hum.append(db.reference(path_hum).get())
 
+    # remove None values from the list
+    data_temp = [x for x in data_temp if x is not None]
+    data_hum = [x for x in data_hum if x is not None]
     # Calculate the sum while ignoring None values
     raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
     raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
@@ -221,6 +227,9 @@ def process_data_days(hours, user_id, db, month, year):
         data_hum.append(db.reference(path_hum).get())
 
         hours += 1
+    # remove None values from the list
+    data_temp = [x for x in data_temp if x is not None]
+    data_hum = [x for x in data_hum if x is not None]
     # Calculate the sum while ignoring None values
     raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
     raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
@@ -269,6 +278,9 @@ def process_data_hours(minutes, hours, user_id, db, days, month, year):
         data_hum.append(db.reference(path_hum).get())
 
         minutes += 1
+    #remove None values from the list
+    data_temp = [x for x in data_temp if x is not None]
+    data_hum = [x for x in data_hum if x is not None]
     # Calculate the sum while ignoring None values
     raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
     raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
