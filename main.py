@@ -96,7 +96,7 @@ def continuously_check_time(db):
             for user_id in user_ids:
                 print("per day average data is being processed  {0}".format(user_ids))
                 process_data_days(hours, user_id, db, month, year)
-        if minutes ==11:
+        if minutes ==0:
             for user_id in user_ids:
                 print("per hour average data is being processed  {0}".format(user_ids))
                 process_data_hours(minutes, hours, user_id, db, days, month, year)
