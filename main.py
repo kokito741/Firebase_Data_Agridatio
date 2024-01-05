@@ -84,9 +84,6 @@ def continuously_check_time(db):
         days = int(now.strftime("%d"))
         month = int(now.strftime("%m"))
         year = int(now.strftime("%Y"))
-        formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year) + " - " + str(
-            hours).zfill(2) + "-" + str(minutes).zfill(2)
-        print(formatted_now)
         if month == 1 and days == 2 and hours == 1 and minutes == 1:
             for user_id in user_ids:
                 print("per year average data is being process  {0}".format(user_ids))
@@ -99,7 +96,7 @@ def continuously_check_time(db):
             for user_id in user_ids:
                 print("per day average data is being processed  {0}".format(user_ids))
                 process_data_days(hours, user_id, db, month, year)
-        if minutes == 0:
+        if minutes ==11:
             for user_id in user_ids:
                 print("per hour average data is being processed  {0}".format(user_ids))
                 process_data_hours(minutes, hours, user_id, db, days, month, year)
@@ -127,13 +124,18 @@ def process_data_year(year, user_id, db):
         path_hum = user_id + "/Average per month/Living Room/" + formatted_now + "/humidity"
         data_temp.append(db.reference(path_temp).get())
         data_hum.append(db.reference(path_hum).get())
-
     #remove None values from the list
     data_temp = [x for x in data_temp if x is not None]
     data_hum = [x for x in data_hum if x is not None]
     # Calculate the sum while ignoring None values
-    raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    if len(data_temp) != 0:
+        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+    else:
+        raw_data_temp_average = 0
+    if len(data_hum) != 0:
+        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    else:
+        raw_data_hum_average = 0
     processed_data_temp_average = round(raw_data_temp_average, 1)
     processed_data_hum_average = round(raw_data_hum_average, 1)
     # Save the average temperature to Firebase
@@ -180,8 +182,14 @@ def process_data_month(user_id, db):
     data_temp = [x for x in data_temp if x is not None]
     data_hum = [x for x in data_hum if x is not None]
     # Calculate the sum while ignoring None values
-    raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    if len(data_temp) != 0:
+        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+    else:
+        raw_data_temp_average = 0
+    if len(data_hum) != 0:
+        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    else:
+        raw_data_hum_average = 0
     processed_data_temp_average = round(raw_data_temp_average, 1)
     processed_data_hum_average = round(raw_data_hum_average, 1)
     # Save the average temperature to Firebase
@@ -231,8 +239,14 @@ def process_data_days(hours, user_id, db, month, year):
     data_temp = [x for x in data_temp if x is not None]
     data_hum = [x for x in data_hum if x is not None]
     # Calculate the sum while ignoring None values
-    raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    if len(data_temp) != 0:
+        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+    else:
+        raw_data_temp_average = 0
+    if len(data_hum) != 0:
+        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    else:
+        raw_data_hum_average = 0
     processed_data_temp_average = round(raw_data_temp_average, 1)
     processed_data_hum_average = round(raw_data_hum_average, 1)
     # Save the average temperature to Firebase
@@ -270,20 +284,29 @@ def process_data_hours(minutes, hours, user_id, db, days, month, year):
     data_temp = []
     data_hum = []
     while minutes < 60:
-        formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year) + " - " + str(
+        formatted_now = str(days) + "-" + str(month) + "-" + str(year) + " - " + str(
             hours).zfill(2) + "-" + str(minutes).zfill(2)
-        path_temp = user_id + "/Living Room/" + formatted_now + "/" + "/temperature"
-        path_hum = user_id + "/Living Room/" + formatted_now + "/" + "/humidity"
+        path_temp = user_id + "/Living Room/" + formatted_now + "/temperature"
+        print("path_temp: ", path_temp)
+        path_hum = user_id + "/Living Room/" + formatted_now + "/humidity"
         data_temp.append(db.reference(path_temp).get())
         data_hum.append(db.reference(path_hum).get())
 
         minutes += 1
     #remove None values from the list
     data_temp = [x for x in data_temp if x is not None]
+    logger.info("data_temp: {0}".format(data_temp))
     data_hum = [x for x in data_hum if x is not None]
+    logger.info("data_hum: {0}".format(data_hum))
     # Calculate the sum while ignoring None values
-    raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    if len(data_temp) != 0:
+        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+    else:
+        raw_data_temp_average = 0
+    if len(data_hum) != 0:
+        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+    else:
+        raw_data_hum_average = 0
     processed_data_temp_average = round(raw_data_temp_average, 1)
     processed_data_hum_average = round(raw_data_hum_average, 1)
     # Save the average temperature to Firebase
