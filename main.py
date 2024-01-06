@@ -92,11 +92,11 @@ def continuously_check_time(db):
             for user_id in user_ids:
                 print("per month average data is being process  {0}".format(user_ids))
                 process_data_month(user_id, db)
-        if hours == 0 and minutes == 3:
+        if hours == 11 and minutes == 16:
             for user_id in user_ids:
                 print("per day average data is being processed  {0}".format(user_ids))
                 process_data_days(hours, user_id, db, month, year)
-        if minutes ==0:
+        if minutes == 0:
             for user_id in user_ids:
                 print("per hour average data is being processed  {0}".format(user_ids))
                 process_data_hours(minutes, hours, user_id, db, days, month, year)
@@ -163,10 +163,10 @@ def process_data_month(user_id, db):
     data_temp = []
     data_hum = []
     # Get the date 4 weeks ago
-    date_four_weeks_ago = datetime.today() - timedelta(weeks=5)
+    date_five_weeks_ago = (datetime.today() - timedelta(weeks=5)).date()
 
     # Get the year and month of the date 5 weeks ago
-    year, month = date_four_weeks_ago.year, date_four_weeks_ago.month
+    year, month = date_five_weeks_ago.year, date_five_weeks_ago.month
 
     # Get the last day of that month
     _, last_day = calendar.monthrange(year, month)
@@ -218,19 +218,18 @@ def process_data_days(hours, user_id, db, month, year):
     """
 
     logger.info("Processing data per day started  {0}".format(user_ids))
-    days = datetime.today() - timedelta(days=1)
+    days = (datetime.today() - timedelta(days=1)).strftime('%d')
 
     data_temp = []
     data_hum = []
-
+    hours = 0
     while hours < 24:
         formatted_now = "-" + str(month).zfill(2) + "-" + str(year)
         path_temp = user_id + "/Average per hour/Living Room/" + str(days).zfill(2) + formatted_now + " - " + str(
-            hours).zfill(
-            2) + "/temperature"
+            hours).zfill(2) + "/temperature"
         path_hum = user_id + "/Average per hour/Living Room/" + str(days).zfill(2) + formatted_now + " - " + str(
-            hours).zfill(
-            2) + "/humidity"
+            hours).zfill(2) + "/humidity"
+        print("path_temp: ", path_temp)
         data_temp.append(db.reference(path_temp).get())
         data_hum.append(db.reference(path_hum).get())
 
