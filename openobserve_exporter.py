@@ -31,16 +31,22 @@ def send_to_openobserve(line):
     Send a log line to OpenObserve
     :param line:
     """
-    user = "kokito741@gmail.com"
-    password = "39pYiebC8mKgAxZe"
-    bas64encoded_creds = base64.b64encode(bytes(user + ":" + password, "utf-8")).decode("utf-8")
-    data = json.loads(log_to_json(line))
-    print(data)
-    headers = {"Content-type": "application/json", "Authorization": "Basic " + bas64encoded_creds}
-    openobserve_host = "http://localhost:5080"
-    openobserve_url = openobserve_host + "/api/default/default/_json"
+    try:
+        user = "kokito741@gmail.com"
+        password = "39pYiebC8mKgAxZe"
+        bas64encoded_creds = base64.b64encode(bytes(user + ":" + password, "utf-8")).decode("utf-8")
+        data = json.loads(log_to_json(line))
+        print(data)
+        headers = {"Content-type": "application/json", "Authorization": "Basic " + bas64encoded_creds}
+        openobserve_host = "http://localhost:5080"
+        openobserve_url = openobserve_host + "/api/default/default/_json"
 
-    res = requests.post(openobserve_url, headers=headers, data=json.dumps(data))
+        res = requests.post(openobserve_url, headers=headers, data=json.dumps(data))
+        res.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        print(f"Error sending data to OpenObserve: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
 
 
 def follow(thefile):
@@ -48,14 +54,18 @@ def follow(thefile):
     Generator function that yields new lines in a file
     :param thefile:
     """
-    thefile.seek(0,2)
-    while True:
-        line = thefile.readline()
-        if not line:
-            time.sleep(0.1)
-            continue
-        yield line
-
+    try:
+        thefile.seek(0,2)
+        while True:
+            line = thefile.readline()
+            if not line:
+                time.sleep(0.1)
+                continue
+            yield line
+    except IOError as e:
+        print(f"Error reading file: {e}")
+    except Exception as e:
+        print(f"Unexpected error: {e}")
 
 if __name__ == '__main__':
     time.sleep(0.5)

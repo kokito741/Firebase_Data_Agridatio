@@ -62,47 +62,51 @@ def continuously_check_time(db):
     """
     logger.info("continuously_check_time started")
     global page
-    while True:
+    try:
+        while True:
 
-        # Get the current time
-        while page:
+            # Get the current time
+            while page:
 
-            # Loop through the users in the current page
-            for user in page.users:
-                # Get the user ID and append it to the list
-                user_id = user.uid
-                user_ids.append(user_id)
-            # Get the next page of users
-            page = page.get_next_page()
+                # Loop through the users in the current page
+                for user in page.users:
+                    # Get the user ID and append it to the list
+                    user_id = user.uid
+                    user_ids.append(user_id)
+                # Get the next page of users
+                page = page.get_next_page()
 
-        # Print the list of user IDs
-        print(user_ids)
-        logger.info("user_ids: {0}".format(user_ids))
-        now = datetime.now()
-        minutes = int(now.strftime("%M"))
-        hours = int(now.strftime("%H"))
-        days = int(now.strftime("%d"))
-        month = int(now.strftime("%m"))
-        year = int(now.strftime("%Y"))
-        if month == 1 and days == 2 and hours == 1 and minutes == 1:
-            for user_id in user_ids:
-                print("per year average data is being process  {0}".format(user_ids))
-                process_data_year(year, user_id, db)
-        if days == 1 and hours == 0 and minutes == 6:
-            for user_id in user_ids:
-                print("per month average data is being process  {0}".format(user_ids))
-                process_data_month(user_id, db)
-        if hours == 11 and minutes == 16:
-            for user_id in user_ids:
-                print("per day average data is being processed  {0}".format(user_ids))
-                process_data_days(hours, user_id, db, month, year)
-        if minutes == 0:
-            for user_id in user_ids:
-                print("per hour average data is being processed  {0}".format(user_ids))
-                process_data_hours(minutes, hours, user_id, db, days, month, year)
-        logger.info("continuously_check_time  waiting for 60 seconds")
-        # Sleep for 60 seconds
-        time.sleep(60)
+            # Print the list of user IDs
+            print(user_ids)
+            logger.info("user_ids: {0}".format(user_ids))
+            now = datetime.now()
+            minutes = int(now.strftime("%M"))
+            hours = int(now.strftime("%H"))
+            days = int(now.strftime("%d"))
+            month = int(now.strftime("%m"))
+            year = int(now.strftime("%Y"))
+            if month == 1 and days == 2 and hours == 1 and minutes == 1:
+                for user_id in user_ids:
+                    print("per year average data is being process  {0}".format(user_ids))
+                    process_data_year(year, user_id, db)
+            if days == 1 and hours == 0 and minutes == 6:
+                for user_id in user_ids:
+                    print("per month average data is being process  {0}".format(user_ids))
+                    process_data_month(user_id, db)
+            if hours == 11 and minutes == 16:
+                for user_id in user_ids:
+                    print("per day average data is being processed  {0}".format(user_ids))
+                    process_data_days(hours, user_id, db, month, year)
+            if minutes == 0:
+                for user_id in user_ids:
+                    print("per hour average data is being processed  {0}".format(user_ids))
+                    process_data_hours(minutes, hours, user_id, db, days, month, year)
+            logger.info("continuously_check_time  waiting for 60 seconds")
+            # Sleep for 60 seconds
+            time.sleep(60)
+    except Exception as e:
+        logger.error("Error in continuously_check_time: {0}".format(e))
+        logger.info("continuously_check_time ended")
 
 
 def process_data_year(year, user_id, db):
@@ -114,41 +118,44 @@ def process_data_year(year, user_id, db):
     :param user_id: 
     :param db: 
     """
-    logger.info("Processing data per year started {0}".format(user_ids))
-    data_temp = []
-    data_hum = []
-    year -= 1
-    for month in range(1, 13):
-        formatted_now = str(month).zfill(2) + "-" + str(year)
-        path_temp = user_id + "/Average per month/Living Room/" + formatted_now + "/temperature"
-        path_hum = user_id + "/Average per month/Living Room/" + formatted_now + "/humidity"
-        data_temp.append(db.reference(path_temp).get())
-        data_hum.append(db.reference(path_hum).get())
-    #remove None values from the list
-    data_temp = [x for x in data_temp if x is not None]
-    data_hum = [x for x in data_hum if x is not None]
-    # Calculate the sum while ignoring None values
-    if len(data_temp) != 0:
-        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    else:
-        raw_data_temp_average = 0
-    if len(data_hum) != 0:
-        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
-    else:
-        raw_data_hum_average = 0
-    processed_data_temp_average = round(raw_data_temp_average, 1)
-    processed_data_hum_average = round(raw_data_hum_average, 1)
-    # Save the average temperature to Firebase
-    path_temp_average = user_id + "/Average per year" + "/Living Room/" + str(year) + "/temperature"
-    path_hum_average = user_id + "/Average per year" + "/Living Room/" + str(year) + "/humidity"
+    try:
+        logger.info("Processing data per year started {0}".format(user_ids))
+        data_temp = []
+        data_hum = []
+        year -= 1
+        for month in range(1, 13):
+            formatted_now = str(month).zfill(2) + "-" + str(year)
+            path_temp = user_id + "/Average per month/Living Room/" + formatted_now + "/temperature"
+            path_hum = user_id + "/Average per month/Living Room/" + formatted_now + "/humidity"
+            data_temp.append(db.reference(path_temp).get())
+            data_hum.append(db.reference(path_hum).get())
+        #remove None values from the list
+        data_temp = [x for x in data_temp if x is not None]
+        data_hum = [x for x in data_hum if x is not None]
+        # Calculate the sum while ignoring None values
+        if len(data_temp) != 0:
+            raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+        else:
+            raw_data_temp_average = 0
+        if len(data_hum) != 0:
+            raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+        else:
+            raw_data_hum_average = 0
+        processed_data_temp_average = round(raw_data_temp_average, 1)
+        processed_data_hum_average = round(raw_data_hum_average, 1)
+        # Save the average temperature to Firebase
+        path_temp_average = user_id + "/Average per year" + "/Living Room/" + str(year) + "/temperature"
+        path_hum_average = user_id + "/Average per year" + "/Living Room/" + str(year) + "/humidity"
 
-    db.reference(path_temp_average).set(processed_data_temp_average)
-    db.reference(path_hum_average).set(processed_data_hum_average)
-    logger.info("processed_data_temp_average per year: {0} - {1}".format(processed_data_temp_average, user_id))
-    logger.info("processed_data_hum_average per year: {0} - {1}".format(processed_data_hum_average, user_id))
-    print("processed_data_temp_average per year: ", processed_data_temp_average)
-    print("processed_data_hum_average per year: ", processed_data_hum_average)
-    logger.info("Processing data per year ended {0}".format(user_ids))
+        db.reference(path_temp_average).set(processed_data_temp_average)
+        db.reference(path_hum_average).set(processed_data_hum_average)
+        logger.info("processed_data_temp_average per year: {0} - {1}".format(processed_data_temp_average, user_id))
+        logger.info("processed_data_hum_average per year: {0} - {1}".format(processed_data_hum_average, user_id))
+        print("processed_data_temp_average per year: ", processed_data_temp_average)
+        print("processed_data_hum_average per year: ", processed_data_hum_average)
+        logger.info("Processing data per year ended {0}".format(user_ids))
+    except Exception as e:
+        logger.error("Error in process_data_year: {0}".format(e))
 
 
 def process_data_month(user_id, db):
@@ -159,50 +166,53 @@ def process_data_month(user_id, db):
     :param user_id:
     :param db:
     """
-    logger.info("Processing data per month started  {0}".format(user_ids))
-    data_temp = []
-    data_hum = []
-    # Get the date 4 weeks ago
-    date_five_weeks_ago = (datetime.today() - timedelta(weeks=5)).date()
+    try:
+        logger.info("Processing data per month started  {0}".format(user_ids))
+        data_temp = []
+        data_hum = []
+        # Get the date 4 weeks ago
+        date_five_weeks_ago = (datetime.today() - timedelta(weeks=5)).date()
 
-    # Get the year and month of the date 5 weeks ago
-    year, month = date_five_weeks_ago.year, date_five_weeks_ago.month
+        # Get the year and month of the date 5 weeks ago
+        year, month = date_five_weeks_ago.year, date_five_weeks_ago.month
 
-    # Get the last day of that month
-    _, last_day = calendar.monthrange(year, month)
-    for day in range(1, last_day + 1):
-        formatted_now = str(day).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year)
-        path_temp = user_id + "/Average per day/Living Room/" + formatted_now + "/temperature"
-        path_hum = user_id + "/Average per day/Living Room/" + formatted_now + "/humidity"
-        data_temp.append(db.reference(path_temp).get())
-        print("data_temp: ", path_temp)
-        data_hum.append(db.reference(path_hum).get())
+        # Get the last day of that month
+        _, last_day = calendar.monthrange(year, month)
+        for day in range(1, last_day + 1):
+            formatted_now = str(day).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year)
+            path_temp = user_id + "/Average per day/Living Room/" + formatted_now + "/temperature"
+            path_hum = user_id + "/Average per day/Living Room/" + formatted_now + "/humidity"
+            data_temp.append(db.reference(path_temp).get())
+            print("data_temp: ", path_temp)
+            data_hum.append(db.reference(path_hum).get())
 
-    # remove None values from the list
-    data_temp = [x for x in data_temp if x is not None]
-    data_hum = [x for x in data_hum if x is not None]
-    # Calculate the sum while ignoring None values
-    if len(data_temp) != 0:
-        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    else:
-        raw_data_temp_average = 0
-    if len(data_hum) != 0:
-        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
-    else:
-        raw_data_hum_average = 0
-    processed_data_temp_average = round(raw_data_temp_average, 1)
-    processed_data_hum_average = round(raw_data_hum_average, 1)
-    # Save the average temperature to Firebase
-    formatted_now = str(month).zfill(2) + "-" + str(year)
-    path_temp_average = user_id + "/Average per month" + "/Living Room/" + formatted_now + "/temperature"
-    path_hum_average = user_id + "/Average per month" + "/Living Room/" + formatted_now + "/humidity"
-    db.reference(path_temp_average).set(processed_data_temp_average)
-    db.reference(path_hum_average).set(processed_data_hum_average)
-    logger.info("processed_data_temp_average per month: {0} - {1}".format(processed_data_temp_average, user_id))
-    logger.info("processed_data_hum_average per month: {0} - {1}".format(processed_data_hum_average, user_id))
-    print("processed_data_temp_average per month: ", processed_data_temp_average)
-    print("processed_data_hum_average per month: ", processed_data_hum_average)
-    logger.info("Processing data per month ended  {0}".format(user_ids))
+        # remove None values from the list
+        data_temp = [x for x in data_temp if x is not None]
+        data_hum = [x for x in data_hum if x is not None]
+        # Calculate the sum while ignoring None values
+        if len(data_temp) != 0:
+            raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+        else:
+            raw_data_temp_average = 0
+        if len(data_hum) != 0:
+            raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+        else:
+            raw_data_hum_average = 0
+        processed_data_temp_average = round(raw_data_temp_average, 1)
+        processed_data_hum_average = round(raw_data_hum_average, 1)
+        # Save the average temperature to Firebase
+        formatted_now = str(month).zfill(2) + "-" + str(year)
+        path_temp_average = user_id + "/Average per month" + "/Living Room/" + formatted_now + "/temperature"
+        path_hum_average = user_id + "/Average per month" + "/Living Room/" + formatted_now + "/humidity"
+        db.reference(path_temp_average).set(processed_data_temp_average)
+        db.reference(path_hum_average).set(processed_data_hum_average)
+        logger.info("processed_data_temp_average per month: {0} - {1}".format(processed_data_temp_average, user_id))
+        logger.info("processed_data_hum_average per month: {0} - {1}".format(processed_data_hum_average, user_id))
+        print("processed_data_temp_average per month: ", processed_data_temp_average)
+        print("processed_data_hum_average per month: ", processed_data_hum_average)
+        logger.info("Processing data per month ended  {0}".format(user_ids))
+    except Exception as e:
+        logger.error("Error in process_data_month: {0}".format(e))
 
 
 def process_data_days(hours, user_id, db, month, year):
@@ -216,50 +226,52 @@ def process_data_days(hours, user_id, db, month, year):
     :param month:
     :param year:
     """
+    try:
+        logger.info("Processing data per day started  {0}".format(user_ids))
+        days = (datetime.today() - timedelta(days=1)).strftime('%d')
 
-    logger.info("Processing data per day started  {0}".format(user_ids))
-    days = (datetime.today() - timedelta(days=1)).strftime('%d')
+        data_temp = []
+        data_hum = []
+        hours = 0
+        while hours < 24:
+            formatted_now = "-" + str(month).zfill(2) + "-" + str(year)
+            path_temp = user_id + "/Average per hour/Living Room/" + str(days).zfill(2) + formatted_now + " - " + str(
+                hours).zfill(2) + "/temperature"
+            path_hum = user_id + "/Average per hour/Living Room/" + str(days).zfill(2) + formatted_now + " - " + str(
+                hours).zfill(2) + "/humidity"
+            print("path_temp: ", path_temp)
+            data_temp.append(db.reference(path_temp).get())
+            data_hum.append(db.reference(path_hum).get())
 
-    data_temp = []
-    data_hum = []
-    hours = 0
-    while hours < 24:
-        formatted_now = "-" + str(month).zfill(2) + "-" + str(year)
-        path_temp = user_id + "/Average per hour/Living Room/" + str(days).zfill(2) + formatted_now + " - " + str(
-            hours).zfill(2) + "/temperature"
-        path_hum = user_id + "/Average per hour/Living Room/" + str(days).zfill(2) + formatted_now + " - " + str(
-            hours).zfill(2) + "/humidity"
-        print("path_temp: ", path_temp)
-        data_temp.append(db.reference(path_temp).get())
-        data_hum.append(db.reference(path_hum).get())
+            hours += 1
+        # remove None values from the list
+        data_temp = [x for x in data_temp if x is not None]
+        data_hum = [x for x in data_hum if x is not None]
+        # Calculate the sum while ignoring None values
+        if len(data_temp) != 0:
+            raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+        else:
+            raw_data_temp_average = 0
+        if len(data_hum) != 0:
+            raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+        else:
+            raw_data_hum_average = 0
+        processed_data_temp_average = round(raw_data_temp_average, 1)
+        processed_data_hum_average = round(raw_data_hum_average, 1)
+        # Save the average temperature to Firebase
+        formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year)
+        path_temp_average = user_id + "/Average per day" + "/Living Room/" + formatted_now + "/temperature"
+        path_hum_average = user_id + "/Average per day" + "/Living Room/" + formatted_now + "/humidity"
+        db.reference(path_temp_average).set(processed_data_temp_average)
+        db.reference(path_hum_average).set(processed_data_hum_average)
 
-        hours += 1
-    # remove None values from the list
-    data_temp = [x for x in data_temp if x is not None]
-    data_hum = [x for x in data_hum if x is not None]
-    # Calculate the sum while ignoring None values
-    if len(data_temp) != 0:
-        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    else:
-        raw_data_temp_average = 0
-    if len(data_hum) != 0:
-        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
-    else:
-        raw_data_hum_average = 0
-    processed_data_temp_average = round(raw_data_temp_average, 1)
-    processed_data_hum_average = round(raw_data_hum_average, 1)
-    # Save the average temperature to Firebase
-    formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year)
-    path_temp_average = user_id + "/Average per day" + "/Living Room/" + formatted_now + "/temperature"
-    path_hum_average = user_id + "/Average per day" + "/Living Room/" + formatted_now + "/humidity"
-    db.reference(path_temp_average).set(processed_data_temp_average)
-    db.reference(path_hum_average).set(processed_data_hum_average)
-
-    print("processed_data_temp_average per day: ", processed_data_temp_average)
-    print("processed_data_hum_average per day: ", processed_data_hum_average)
-    logger.info("processed_data_temp_average per day: {0} - {1}".format(processed_data_temp_average, user_id))
-    logger.info("processed_data_hum_average per day: {0} - {1}".format(processed_data_hum_average, user_id))
-    logger.info("Processing data per day ended  {0}".format(user_ids))
+        print("processed_data_temp_average per day: ", processed_data_temp_average)
+        print("processed_data_hum_average per day: ", processed_data_hum_average)
+        logger.info("processed_data_temp_average per day: {0} - {1}".format(processed_data_temp_average, user_id))
+        logger.info("processed_data_hum_average per day: {0} - {1}".format(processed_data_hum_average, user_id))
+        logger.info("Processing data per day ended  {0}".format(user_ids))
+    except Exception as e:
+        logger.error("Error in process_data_days: {0}".format(e))
 
 
 def process_data_hours(minutes, hours, user_id, db, days, month, year):
@@ -275,51 +287,54 @@ def process_data_hours(minutes, hours, user_id, db, days, month, year):
     :param month:
     :param year:
     """
-    logger.info("Processing data per hour started {0}".format(user_ids))
-    if hours > 0:
-        hours -= 1
-    elif hours == 00:
-        hours = 23
-    data_temp = []
-    data_hum = []
-    while minutes < 60:
-        formatted_now = str(days) + "-" + str(month) + "-" + str(year) + " - " + str(
-            hours).zfill(2) + "-" + str(minutes).zfill(2)
-        path_temp = user_id + "/Living Room/" + formatted_now + "/temperature"
-        print("path_temp: ", path_temp)
-        path_hum = user_id + "/Living Room/" + formatted_now + "/humidity"
-        data_temp.append(db.reference(path_temp).get())
-        data_hum.append(db.reference(path_hum).get())
+    try:
+        logger.info("Processing data per hour started {0}".format(user_ids))
+        if hours > 0:
+            hours -= 1
+        elif hours == 00:
+            hours = 23
+        data_temp = []
+        data_hum = []
+        while minutes < 60:
+            formatted_now = str(days) + "-" + str(month) + "-" + str(year) + " - " + str(
+                hours).zfill(2) + "-" + str(minutes).zfill(2)
+            path_temp = user_id + "/Living Room/" + formatted_now + "/temperature"
+            print("path_temp: ", path_temp)
+            path_hum = user_id + "/Living Room/" + formatted_now + "/humidity"
+            data_temp.append(db.reference(path_temp).get())
+            data_hum.append(db.reference(path_hum).get())
 
-        minutes += 1
-    #remove None values from the list
-    data_temp = [x for x in data_temp if x is not None]
-    logger.info("data_temp: {0}".format(data_temp))
-    data_hum = [x for x in data_hum if x is not None]
-    logger.info("data_hum: {0}".format(data_hum))
-    # Calculate the sum while ignoring None values
-    if len(data_temp) != 0:
-        raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
-    else:
-        raw_data_temp_average = 0
-    if len(data_hum) != 0:
-        raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
-    else:
-        raw_data_hum_average = 0
-    processed_data_temp_average = round(raw_data_temp_average, 1)
-    processed_data_hum_average = round(raw_data_hum_average, 1)
-    # Save the average temperature to Firebase
-    formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year) + " - " + str(
-        hours).zfill(2)
-    path_temp_average = user_id + "/Average per hour" + "/Living Room/" + formatted_now + "/temperature"
-    path_hum_average = user_id + "/Average per hour" + "/Living Room/" + formatted_now + "/humidity"
-    db.reference(path_temp_average).set(processed_data_temp_average)
-    db.reference(path_hum_average).set(processed_data_hum_average)
-    logger.info("processed_data_temp_average per hour: {0} - {1}".format(processed_data_temp_average, user_id))
-    logger.info("processed_data_hum_average per hour: {0} - {1}".format(processed_data_hum_average, user_id))
-    print("processed_data_temp_average per hour: ", processed_data_temp_average)
-    print("processed_data_hum_average per hour: ", processed_data_hum_average)
-    logger.info("Processing data per hour ended  {0}".format(user_ids))
+            minutes += 1
+        #remove None values from the list
+        data_temp = [x for x in data_temp if x is not None]
+        logger.info("data_temp: {0}".format(data_temp))
+        data_hum = [x for x in data_hum if x is not None]
+        logger.info("data_hum: {0}".format(data_hum))
+        # Calculate the sum while ignoring None values
+        if len(data_temp) != 0:
+            raw_data_temp_average = sum(x for x in data_temp if x is not None) / len(data_temp)
+        else:
+            raw_data_temp_average = 0
+        if len(data_hum) != 0:
+            raw_data_hum_average = sum(x for x in data_hum if x is not None) / len(data_hum)
+        else:
+            raw_data_hum_average = 0
+        processed_data_temp_average = round(raw_data_temp_average, 1)
+        processed_data_hum_average = round(raw_data_hum_average, 1)
+        # Save the average temperature to Firebase
+        formatted_now = str(days).zfill(2) + "-" + str(month).zfill(2) + "-" + str(year) + " - " + str(
+            hours).zfill(2)
+        path_temp_average = user_id + "/Average per hour" + "/Living Room/" + formatted_now + "/temperature"
+        path_hum_average = user_id + "/Average per hour" + "/Living Room/" + formatted_now + "/humidity"
+        db.reference(path_temp_average).set(processed_data_temp_average)
+        db.reference(path_hum_average).set(processed_data_hum_average)
+        logger.info("processed_data_temp_average per hour: {0} - {1}".format(processed_data_temp_average, user_id))
+        logger.info("processed_data_hum_average per hour: {0} - {1}".format(processed_data_hum_average, user_id))
+        print("processed_data_temp_average per hour: ", processed_data_temp_average)
+        print("processed_data_hum_average per hour: ", processed_data_hum_average)
+        logger.info("Processing data per hour ended  {0}".format(user_ids))
+    except Exception as e:
+        logger.error("Error in process_data_hours: {0}".format(e))
 
 
 if __name__ == "__main__":
